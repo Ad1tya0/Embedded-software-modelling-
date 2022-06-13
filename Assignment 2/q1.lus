@@ -1,0 +1,7 @@
+node state (set,reset,initial : bool) returns (y : bool);
+let
+    y = initial ->
+        if set and not(reset) then true
+        else if reset and not (set) then false
+        else pre(y);
+tel.

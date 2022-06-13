@@ -1,0 +1,5 @@
+node flow (a : int) returns (x,y : int);
+let
+    y = a+1;
+    x = 0 -> ((a+pre(x))*2)+y;
+tel.

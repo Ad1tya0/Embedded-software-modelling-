@@ -1,0 +1,5 @@
+node prev (x : int) returns (y : int); var b:bool;
+let
+    b = false -> not pre(b);
+    y=x + current(x when b);
+tel.

@@ -1,0 +1,13 @@
+node coin (coin5, coin10 : bool) returns (bottle, returnCoin : bool); 
+
+let
+    assert not (coin5 and coin10);  
+    bottle = if coin10 then true
+             else if coin5 and pre(coin5) then true
+             else false;
+
+    returnCoin = if coin5 and pre(coin10) then true
+                 else if coin10 and pre(coin5) then true
+                 else false;
+
+tel.
